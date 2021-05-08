@@ -5,9 +5,9 @@ require("which-key").setup {
         -- the presets plugin, adds help for a bunch of default keybindings in Neovim
         -- No actual key bindings are created
         presets = {
-            operators = true, -- adds help for operators like d, y, ...
-            motions = true, -- adds help for motions
-            text_objects = true, -- help for text objects triggered after entering an operator
+            -- operators = true, -- adds help for operators like d, y, ...
+            -- motions = true, -- adds help for motions
+            -- text_objects = true, -- help for text objects triggered after entering an operator
             windows = true, -- default bindings on <c-w>
             nav = true, -- misc bindings to work with windows
             z = true, -- bindings for folds, spelling and others prefixed with z
@@ -63,15 +63,22 @@ vim.api.nvim_set_keymap('n', '<Leader>;', ':Dashboard<CR>', {noremap = true, sil
 vim.api.nvim_set_keymap("n", "<leader>/", ":CommentToggle<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("v", "<leader>/", ":CommentToggle<CR>", {noremap = true, silent = true})
 
--- close buffer
-vim.api.nvim_set_keymap("n", "<leader>c", ":BufferClose<CR>", {noremap = true, silent = true})
+-- Save file(s)
+vim.api.nvim_set_keymap("n", "<leader>w", ":w<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<leader>a", ":wa<CR>", {noremap = true, silent = true})
+
+-- Terminal
+vim.api.nvim_set_keymap("n", "<leader>t", ":vsp term://zsh<CR>", {noremap = true, silent = true})
+
 
 -- TODO create entire treesitter section
 
 local mappings = {
     ["/"] = "Comment",
-    ["c"] = "Close Buffer",
+    ["w"] = "Save File",
+    ["a"] = "Save All Files",
     ["e"] = "Explorer",
+    ["t"] = "Terminal",
     ["f"] = "Find File",
     ["h"] = "No Highlight",
     d = {
@@ -118,7 +125,8 @@ local mappings = {
 
     s = {
         name = "+Search",
-        b = {"<cmd>Telescope git_branches<cr>", "Checkout branch"},
+        b = {"<cmd>Telescope buffers<cr>", "Buffers"},
+        B = {"<cmd>Telescope git_branches<cr>", "Branches"},
         c = {"<cmd>Telescope colorscheme<cr>", "Colorscheme"},
         d = {"<cmd>Telescope lsp_document_diagnostics<cr>", "Document Diagnostics"},
         D = {"<cmd>Telescope lsp_workspace_diagnostics<cr>", "Workspace Diagnostics"},

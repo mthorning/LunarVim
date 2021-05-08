@@ -30,8 +30,8 @@ gls.left[1] = {
         provider = function()
             -- auto change color according the vim mode
             local mode_color = {
-                n = colors.blue,
-                i = colors.green,
+                n = colors.green,
+                i = colors.blue,
                 v = colors.purple,
                 [''] = colors.purple,
                 V = colors.purple,
@@ -205,4 +205,4 @@ gls.short_line_left[2] = {
     SFileName = {provider = 'SFileName', condition = condition.buffer_not_empty, highlight = {colors.grey, colors.bg}}
 }
 
-gls.short_line_right[1] = {BufferIcon = {provider = 'BufferIcon', highlight = {colors.grey, colors.bg}}}
+-- gls.short_line_right[1] = {BufferIcon = {provider = 'BufferIcon', highlight = {colors.grey, colors.bg}}}

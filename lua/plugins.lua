@@ -35,8 +35,8 @@ return require("packer").startup(
         -- Packer can manage itself as an optional plugin
         use "wbthomason/packer.nvim"
 
-        --tmux navigation
-        use {"christoomey/vim-tmux-navigator"}
+        --tmux navigation (trying neomux first)
+        -- use {"christoomey/vim-tmux-navigator"}
 
 
         -- TODO refactor all of this (for now it works, but yes I know it could be wrapped in a simpler function)
@@ -67,9 +67,7 @@ return require("packer").startup(
         -- TODO remove when open on dir is supported by nvimtree
         use "kevinhwang91/rnvimr"
 
-        -- use {'lukas-reineke/indent-blankline.nvim', opt=true, branch = 'lua'}
         use {"lewis6991/gitsigns.nvim", opt = true}
-        -- use {"liuchengxu/vim-which-key", opt = true}
         use {"folke/which-key.nvim", opt = true}
         use {"ChristianChiarulli/dashboard-nvim", opt = true}
         use {"windwp/nvim-autopairs", opt = true}
@@ -85,8 +83,17 @@ return require("packer").startup(
         -- Status Line
         use {"glepnir/galaxyline.nvim", opt = true}
 
-        use {"https://tpope.io/vim/surround.git"}
-        use {"unblevable/quick-scope"}
+        -- c/d quotes, braces, etc.
+        use "https://tpope.io/vim/surround.git"
+
+        -- Highlights unique character on line
+        use "unblevable/quick-scope"
+
+        -- Tmux in nvim
+        use "nikvdp/neomux"
+
+        -- Smooth page up and down
+        use "psliwka/vim-smoothie"
 
         require_plugin("nvim-lspconfig")
         require_plugin("lspsaga.nvim")
@@ -112,5 +119,7 @@ return require("packer").startup(
         require_plugin("galaxyline.nvim")
         require_plugin("tpope.io/vim/surround.git")
         require_plugin("unblevable/quick-scope")
+        require_plugin("nikvdp/neomux")
+        require_plugin("psliwka/vim-smoothie")
     end
 )

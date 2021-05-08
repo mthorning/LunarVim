@@ -162,6 +162,14 @@ gls.right[8] = {
 }
 
 gls.right[9] = {
+    WinNum = {
+        provider = function()
+            return "W:" .. vim.api.nvim_win_get_number(0) .. " "
+        end,
+    }
+}
+
+gls.right[10] = {
     BufferType = {
         provider = 'FileTypeName',
         condition = condition.hide_in_width,
@@ -171,7 +179,7 @@ gls.right[9] = {
     }
 }
 
-gls.right[10] = {
+gls.right[11] = {
     FileEncode = {
         provider = 'FileEncode',
         condition = condition.hide_in_width,
@@ -181,7 +189,7 @@ gls.right[10] = {
     }
 }
 
-gls.right[11] = {
+gls.right[12] = {
     Space = {
         provider = function()
             return ' '

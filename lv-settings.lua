@@ -10,7 +10,7 @@ an executable
 -- general
 O.auto_complete = true
 O.colorscheme = 'dracula'
-O.auto_close_tree = 0
+O.auto_close_tree = 1
 O.wrap_lines = false
 O.timeoutlen = 100
 

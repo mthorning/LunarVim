@@ -72,8 +72,8 @@ vim.api.nvim_set_keymap("n", "<leader>t", ":vsp term://zsh<CR>", {noremap = true
 
 local mappings = {
     ["/"] = "Comment",
-    ["w"] = "Save File",
-    ["a"] = "Save All Files",
+    ["w"] = "Save",
+    ["a"] = "Save All",
     ["e"] = "Explorer",
     ["t"] = "Terminal",
     ["h"] = "No Highlight",
@@ -119,18 +119,18 @@ local mappings = {
         S = {"<cmd>Telescope lsp_workspace_symbols<cr>", "Workspace Symbols"}
     },
 
-    s = {
-        name = "+Search",
-        b = {"<cmd>Telescope buffers<cr>", "Buffers"},
-        B = {"<cmd>Telescope git_branches<cr>", "Branches"},
+    f = {
+        name = "+Find",
+        b = {"<cmd>Telescope buffers<cr>", "Buffer"},
+        B = {"<cmd>Telescope git_branches<cr>", "Branch"},
         c = {"<cmd>Telescope colorscheme<cr>", "Colorscheme"},
         d = {"<cmd>Telescope lsp_document_diagnostics<cr>", "Document Diagnostics"},
         D = {"<cmd>Telescope lsp_workspace_diagnostics<cr>", "Workspace Diagnostics"},
-        f = {"<cmd>Telescope find_files<cr>", "Find File"},
-        m = {"<cmd>Telescope marks<cr>", "Marks"},
-        M = {"<cmd>Telescope man_pages<cr>", "Man Pages"},
-        r = {"<cmd>Telescope oldfiles<cr>", "Open Recent File"},
-        R = {"<cmd>Telescope registers<cr>", "Registers"},
+        f = {"<cmd>Telescope find_files<cr>", "File"},
+        m = {"<cmd>Telescope marks<cr>", "Mark"},
+        M = {"<cmd>Telescope man_pages<cr>", "Man Page"},
+        r = {"<cmd>Telescope oldfiles<cr>", "Recent"},
+        R = {"<cmd>Telescope registers<cr>", "Register"},
         t = {"<cmd>Telescope live_grep<cr>", "Text"}
     },
     S = {name = "+Session", s = {"<cmd>SessionSave<cr>", "Save Session"}, l = {"<cmd>SessionLoad<cr>", "Load Session"}}

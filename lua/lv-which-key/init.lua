@@ -5,9 +5,9 @@ require("which-key").setup {
         -- the presets plugin, adds help for a bunch of default keybindings in Neovim
         -- No actual key bindings are created
         presets = {
-            -- operators = true, -- adds help for operators like d, y, ...
-            -- motions = true, -- adds help for motions
-            -- text_objects = true, -- help for text objects triggered after entering an operator
+            operators = false, -- adds help for operators like d, y, ...
+            motions = false, -- adds help for motions
+            text_objects = false, -- help for text objects triggered after entering an operator
             windows = true, -- default bindings on <c-w>
             nav = true, -- misc bindings to work with windows
             z = true, -- bindings for folds, spelling and others prefixed with z
@@ -53,9 +53,6 @@ vim.api.nvim_set_keymap('n', '<Leader>h', ':set hlsearch!<CR>', {noremap = true,
 -- explorer
 vim.api.nvim_set_keymap('n', '<Leader>e', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
 
--- telescope
-vim.api.nvim_set_keymap('n', '<Leader>f', ':Telescope find_files<CR>', {noremap = true, silent = true})
-
 -- dashboard
 vim.api.nvim_set_keymap('n', '<Leader>;', ':Dashboard<CR>', {noremap = true, silent = true})
 
@@ -79,7 +76,6 @@ local mappings = {
     ["a"] = "Save All Files",
     ["e"] = "Explorer",
     ["t"] = "Terminal",
-    ["f"] = "Find File",
     ["h"] = "No Highlight",
     d = {
         name = "+Debug",

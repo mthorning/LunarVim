@@ -35,6 +35,10 @@ return require("packer").startup(
         -- Packer can manage itself as an optional plugin
         use "wbthomason/packer.nvim"
 
+        --tmux navigation
+        use {"christoomey/vim-tmux-navigator"}
+
+
         -- TODO refactor all of this (for now it works, but yes I know it could be wrapped in a simpler function)
         use {"neovim/nvim-lspconfig", opt = true}
         use {"glepnir/lspsaga.nvim", opt = true}
@@ -78,8 +82,11 @@ return require("packer").startup(
         -- Icons
         use {"kyazdani42/nvim-web-devicons", opt = true}
 
-        -- Status Line and Bufferline
+        -- Status Line
         use {"glepnir/galaxyline.nvim", opt = true}
+
+        use {"https://tpope.io/vim/surround.git"}
+        use {"unblevable/quick-scope"}
 
         require_plugin("nvim-lspconfig")
         require_plugin("lspsaga.nvim")
@@ -103,5 +110,7 @@ return require("packer").startup(
         require_plugin("nvcode-color-schemes.vim")
         require_plugin("nvim-web-devicons")
         require_plugin("galaxyline.nvim")
+        require_plugin("tpope.io/vim/surround.git")
+        require_plugin("unblevable/quick-scope")
     end
 )

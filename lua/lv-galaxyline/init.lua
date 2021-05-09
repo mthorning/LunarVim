@@ -134,7 +134,7 @@ gls.right[5] = {
 gls.right[6] = {
     LineInfo = {
         provider = 'LineColumn',
-        separator = '  ',
+        separator = ' ',
         separator_highlight = {'NONE', colors.bg},
         highlight = {colors.grey, colors.bg}
     }
@@ -152,7 +152,7 @@ gls.right[7] = {
 gls.right[8] = {
     Tabstop = {
         provider = function()
-            return "Spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth") .. " "
+            return "Spaces:" .. vim.api.nvim_buf_get_option(0, "shiftwidth") .. " "
         end,
         condition = condition.hide_in_width,
         separator = ' ',
@@ -166,6 +166,8 @@ gls.right[9] = {
         provider = function()
             return "W:" .. vim.api.nvim_win_get_number(0) .. " "
         end,
+        separator = ' ',
+        highlight = {colors.grey, colors.bg}
     }
 }
 

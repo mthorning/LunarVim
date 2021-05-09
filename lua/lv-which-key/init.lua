@@ -74,9 +74,15 @@ local mappings = {
     ["/"] = "Comment",
     ["w"] = "Save",
     ["a"] = "Save All",
+    ["q"] = "Quit",
     ["e"] = "Explorer",
-    ["t"] = "Terminal",
     ["h"] = "No Highlight",
+    t = {
+        name = "+Terminal",
+        ["."] = "Here",
+        s = "Split",
+        v = "Vsplit"
+    },
     d = {
         name = "+Debug",
         b = {"<cmd>DebugToggleBreakpoint<cr>", "Toggle Breakpoint"},
@@ -118,7 +124,6 @@ local mappings = {
         s = {"<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols"},
         S = {"<cmd>Telescope lsp_workspace_symbols<cr>", "Workspace Symbols"}
     },
-
     f = {
         name = "+Find",
         b = {"<cmd>Telescope buffers<cr>", "Buffer"},

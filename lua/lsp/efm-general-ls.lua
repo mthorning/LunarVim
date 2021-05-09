@@ -64,11 +64,11 @@ local prettier = {formatCommand = "prettier --stdin-filepath ${INPUT}", formatSt
 -- local prettier = {formatCommand = "./node_modules/.bin/prettier --stdin-filepath ${INPUT}", formatStdin = true}
 
 local eslint = {
-    lintCommand = "./node_modules/.bin/eslint -f unix --stdin --stdin-filename ${INPUT}",
+    lintCommand = "./node_modules/.bin/eslint_d -f unix --stdin --stdin-filename ${INPUT}",
     lintIgnoreExitCode = true,
     lintStdin = true,
     lintFormats = {"%f:%l:%c: %m"},
-    formatCommand = "./node_modules/.bin/eslint --fix-to-stdout --stdin --stdin-filename=${INPUT}",
+    formatCommand = "./node_modules/.bin/eslint_d --fix-to-stdout --stdin --stdin-filename=${INPUT}",
     formatStdin = true
 }
 
@@ -91,7 +91,7 @@ local markdownPandocFormat = {formatCommand = 'pandoc -f markdown -t gfm -sp --t
 require"lspconfig".efm.setup {
     -- init_options = {initializationOptions},
     cmd = {DATA_PATH .. "/lspinstall/efm/efm-langserver"},
-    init_options = {documentFormatting = true, codeAction = false},
+    init_options = { documentFormatting = true, codeAction = true },
     filetypes = {"lua", "python", "javascriptreact", "javascript", "typescript","typescriptreact","sh", "html", "css", "json", "yaml", "markdown", "vue"},
     settings = {
         rootMarkers = {".git/"},

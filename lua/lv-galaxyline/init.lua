@@ -107,6 +107,15 @@ gls.left[6] = {
     }
 }
 
+gls.left[7] = {
+  Modified = {
+    provider = function()
+            if vim.api.nvim_buf_get_option(0, 'modified') == true then return '+' end
+    end,
+    highlight = {colors.blue, colors.bg}
+  }
+}
+
 gls.right[1] = {
     DiagnosticError = {provider = 'DiagnosticError', icon = '  ', highlight = {colors.error_red, colors.bg}}
 }

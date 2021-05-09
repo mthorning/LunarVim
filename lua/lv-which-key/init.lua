@@ -64,6 +64,9 @@ vim.api.nvim_set_keymap("v", "<leader>/", ":CommentToggle<CR>", {noremap = true,
 vim.api.nvim_set_keymap("n", "<leader>w", ":w<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "<leader>a", ":wa<CR>", {noremap = true, silent = true})
 
+-- Quit
+vim.api.nvim_set_keymap("n", "<leader>q", ":q<CR>", {noremap = true, silent = true})
+
 -- LazyGit
 vim.api.nvim_set_keymap("n", "<leader>g", ":LazyGit<CR>", {noremap = true, silent = true})
 

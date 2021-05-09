@@ -64,9 +64,8 @@ vim.api.nvim_set_keymap("v", "<leader>/", ":CommentToggle<CR>", {noremap = true,
 vim.api.nvim_set_keymap("n", "<leader>w", ":w<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "<leader>a", ":wa<CR>", {noremap = true, silent = true})
 
--- Terminal
-vim.api.nvim_set_keymap("n", "<leader>t", ":vsp term://zsh<CR>", {noremap = true, silent = true})
-
+-- LazyGit
+vim.api.nvim_set_keymap("n", "<leader>g", ":LazyGit<CR>", {noremap = true, silent = true})
 
 -- TODO create entire treesitter section
 
@@ -77,6 +76,7 @@ local mappings = {
     ["q"] = "Quit",
     ["e"] = "Explorer",
     ["h"] = "No Highlight",
+    ["g"] = "Git",
     t = {
         name = "+Terminal",
         ["."] = "Here",
@@ -91,20 +91,6 @@ local mappings = {
         o = {"<cmd>DebugStepOver<cr>", "Step Over"},
         r = {"<cmd>DebugToggleRepl<cr>", "Toggle Repl"},
         s = {"<cmd>DebugStart<cr>", "Start"}
-    },
-    g = {
-        name = "+Git",
-        j = {"<cmd>NextHunk<cr>", "Next Hunk"},
-        k = {"<cmd>PrevHunk<cr>", "Prev Hunk"},
-        p = {"<cmd>PreviewHunk<cr>", "Preview Hunk"},
-        r = {"<cmd>ResetHunk<cr>", "Reset Hunk"},
-        R = {"<cmd>ResetBuffer<cr>", "Reset Buffer"},
-        s = {"<cmd>StageHunk<cr>", "Stage Hunk"},
-        u = {"<cmd>UndoStageHunk<cr>", "Undo Stage Hunk"},
-        o = {"<cmd>Telescope git_status<cr>", "Open changed file"},
-        b = {"<cmd>Telescope git_branches<cr>", "Checkout branch"},
-        c = {"<cmd>Telescope git_commits<cr>", "Checkout commit"},
-        C = {"<cmd>Telescope git_bcommits<cr>", "Checkout commit(for current file)"},
     },
     l = {
         name = "+LSP",
@@ -137,6 +123,19 @@ local mappings = {
         r = {"<cmd>Telescope oldfiles<cr>", "Recent"},
         R = {"<cmd>Telescope registers<cr>", "Register"},
         t = {"<cmd>Telescope live_grep<cr>", "Text"}
+    },
+    s = {
+        name = "+Swap Windows",
+        ["1"] = "With 1",
+        ["2"] = "With 2",
+        ["3"] = "With 3",
+        ["4"] = "With 4",
+        ["5"] = "With 5",
+        ["6"] = "With 6",
+        ["7"] = "With 7",
+        ["8"] = "With 8",
+        ["9"] = "With 9",
+        f = "Resize"
     },
     S = {name = "+Session", s = {"<cmd>SessionSave<cr>", "Save Session"}, l = {"<cmd>SessionLoad<cr>", "Load Session"}}
 }

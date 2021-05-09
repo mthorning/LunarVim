@@ -95,6 +95,8 @@ return require("packer").startup(
         -- Smooth page up and down
         use "psliwka/vim-smoothie"
 
+        use "kdheepak/lazygit.nvim"
+
         require_plugin("nvim-lspconfig")
         require_plugin("lspsaga.nvim")
         require_plugin("nvim-lspinstall")
@@ -121,5 +123,6 @@ return require("packer").startup(
         require_plugin("unblevable/quick-scope")
         require_plugin("nikvdp/neomux")
         require_plugin("psliwka/vim-smoothie")
+        require_plugin("kdheepak/lazygit.nvim")
     end
 )

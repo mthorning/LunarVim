@@ -85,6 +85,7 @@ return require("packer").startup(
 
         -- c/d quotes, braces, etc.
         use "https://tpope.io/vim/surround.git"
+        use "https://tpope.io/vim/repeat.git"
 
         -- Highlights unique character on line
         use "unblevable/quick-scope"
@@ -94,8 +95,9 @@ return require("packer").startup(
 
         -- Smooth page up and down
         use "psliwka/vim-smoothie"
-
         use "kdheepak/lazygit.nvim"
+        use "brooth/far.vim"        
+
 
         require_plugin("nvim-lspconfig")
         require_plugin("lspsaga.nvim")
@@ -124,5 +126,6 @@ return require("packer").startup(
         require_plugin("nikvdp/neomux")
         require_plugin("psliwka/vim-smoothie")
         require_plugin("kdheepak/lazygit.nvim")
+        require_plugin("brooth/far.vim")
     end
 )

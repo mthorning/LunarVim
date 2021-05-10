@@ -64,11 +64,11 @@ local prettier = {formatCommand = "prettier --stdin-filepath ${INPUT}", formatSt
 -- local prettier = {formatCommand = "./node_modules/.bin/prettier --stdin-filepath ${INPUT}", formatStdin = true}
 
 local eslint = {
-    lintCommand = "./node_modules/.bin/eslint_d -f unix --stdin --stdin-filename ${INPUT}",
+    lintCommand = "eslint_d -f unix --stdin --stdin-filename ${INPUT}",
     lintIgnoreExitCode = true,
     lintStdin = true,
     lintFormats = {"%f:%l:%c: %m"},
-    formatCommand = "./node_modules/.bin/eslint_d --fix-to-stdout --stdin --stdin-filename=${INPUT}",
+    formatCommand = "eslint_d --fix-to-stdout --stdin --stdin-filename=${INPUT}",
     formatStdin = true
 }
 
@@ -99,17 +99,17 @@ require"lspconfig".efm.setup {
             python = python_arguments,
             lua = lua_arguments,
             sh = sh_arguments,
-            javascript = tsserver_args,
-            javascriptreact = tsserver_args,
+            -- javascript = tsserver_args,
+            -- javascriptreact = tsserver_args,
 			typescript = tsserver_args,
 			typescriptreact = tsserver_args,
             html = {prettier},
             css = {prettier},
             json = {prettier},
             yaml = {prettier},
-            markdown = {markdownPandocFormat}
-            -- javascriptreact = {prettier, eslint},
-            -- javascript = {prettier, eslint},
+            markdown = {markdownPandocFormat},
+            javascriptreact = {prettier, eslint},
+            javascript = {prettier, eslint},
             -- markdown = {markdownPandocFormat, markdownlint},
         }
     }

@@ -79,7 +79,6 @@ autocmd BufWritePre *.jsx lua vim.lsp.buf.formatting_sync(nil, 100)
 autocmd BufWritePre *.lua lua vim.lsp.buf.formatting_sync(nil, 100) ]]
 -- Java
 -- autocmd FileType java nnoremap ca <Cmd>lua require('jdtls').code_action()<CR>
-
 local function documentHighlight(client, bufnr)
     -- Set autocommands conditional on server_capabilities
     if client.resolved_capabilities.document_highlight then
@@ -98,10 +97,25 @@ local function documentHighlight(client, bufnr)
         )
     end
 end
+
+local function setErrorColours()
+    vim.api.nvim_exec(
+    [[
+        hi LspDiagnosticsVirtualTextError guifg=red gui=bold,italic,underline
+        hi LspDiagnosticsVirtualTextWarning guifg=orange gui=bold,italic,underline
+        hi LspDiagnosticsVirtualTextInformation guifg=yellow gui=bold,italic,underline
+        hi LspDiagnosticsVirtualTextHint guifg=green gui=bold,italic,underline   
+    ]],
+        false
+    )
+end
+
+
 local lsp_config = {}
 
 function lsp_config.common_on_attach(client, bufnr)
     documentHighlight(client, bufnr)
+    setErrorColours()
 end
 
 function lsp_config.tsserver_on_attach(client, bufnr)

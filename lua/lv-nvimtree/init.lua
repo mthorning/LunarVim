@@ -53,7 +53,7 @@ local tree_cb = require'nvim-tree.config'.nvim_tree_callback
       ["p"]              = tree_cb("paste"),
       ["[c"]             = tree_cb("prev_git_item"),
       ["]c"]             = tree_cb("next_git_item"),
-      ["-"]              = tree_cb("dir_up"),
+      ["u"]              = tree_cb("dir_up"),
       ["q"]              = tree_cb("close"),
     }
 -- vim.g.nvim_tree_show_icons = {git = 1, folders = 1, files = 1}

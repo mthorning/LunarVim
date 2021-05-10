@@ -32,7 +32,7 @@ O = {
     lua = {
         -- @usage can be 'lua-format'
         formatter = '',
-        autoformat = false,
+        autoformat = true,
         diagnostics = {virtual_text = {spacing = 0, prefix = ""}, signs = true, underline = true}
     },
     sh = {
@@ -54,8 +54,11 @@ O = {
     json = {
         -- @usage can be 'prettier'
         formatter = '',
-        autoformat = false,
+        autoformat = true,
         diagnostics = {virtual_text = {spacing = 0, prefix = ""}, signs = true, underline = true}
+    },
+    go = {
+      autoformat = true
     },
     tailwindls = {filetypes = {'html', 'css', 'scss', 'javascript', 'javascriptreact', 'typescript', 'typescriptreact'}},
     clang = {diagnostics = {virtual_text = {spacing = 0, prefix = ""}, signs = true, underline = true}},
@@ -68,12 +71,15 @@ O = {
 
 	dashboard = {
 		custom_header = {
-'                 _..._                                                                           ',
-'               .\'   (_`.    _                         __     ___           ',
-'              :  .      :  | |   _   _ _ __   __ _ _ _\\ \\   / (_)_ __ ___  ',
-'              :)    ()  :  | |  | | | | \'_ \\ / _` | \'__\\ \\ / /| | \'_ ` _ \\ ',
-'              `.   .   .\'  | |__| |_| | | | | (_| | |   \\ V / | | | | | | |',
-'                `-...-\'    |_____\\__,_|_| |_|\\__,_|_|    \\_/  |_|_| |_| |_|',
+" `--..__   `--.__   `--._ `-._`-.`_=_'.-'_.-' _.--'   __.--'   __..--' ",
+"--..__   `--..__  `--.__  `--._`-q(-_-)p-'_.--'  __.--'  __..--'   __..-- ",
+"      ``--..__  `--..__ `--.__ `-'_) (_`-' __.--' __..--'  __..--'' ",
+"...___        ``--..__ `--..__`--/__/  \\--'__..--' __..--''        ___... ",
+"      ```---...___    ``--..__`_(<_   _/)_'__..--''    ___...---''' ",
+"```-----....._____```---...___(__\\_\\_|_/__)___...---'''_____.....-------- ",
+"____   __  ________   _______   _       _   _______    ___   __   _______ ",
+"|| \\\\  ||  ||______  ||     ||  \\\\     //  ||_____||  || \\\\  ||  ||_____|| ",
+"||  \\\\_||  ||______  ||_____||   \\\\___//   ||     ||  ||  \\\\_||  ||     ||"
 		},
 		footer= {''}
 	}

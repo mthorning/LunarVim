@@ -9,8 +9,8 @@ vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', {silent = true})
 
 -- resize with arrows
 vim.cmd([[
-  nnoremap <silent> <C-Up>    :resize -2<CR>
-  nnoremap <silent> <C-Down>  :resize +2<CR>
+  nnoremap <silent> <C-Up>    :resize +2<CR>
+  nnoremap <silent> <C-Down>  :resize -2<CR>
   nnoremap <silent> <C-Left>  :vertical resize +2<CR>
   nnoremap <silent> <C-Right> :vertical resize -2<CR>
 ]])

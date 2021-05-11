@@ -95,9 +95,12 @@ return require("packer").startup(
 
         -- Smooth page up and down
         use "psliwka/vim-smoothie"
+
+        -- arguments text object
+        use "https://github.com/b4winckler/vim-angry.git"
+        
         use "kdheepak/lazygit.nvim"
         use "brooth/far.vim"        
-
 
         require_plugin("nvim-lspconfig")
         require_plugin("lspsaga.nvim")
@@ -122,9 +125,11 @@ return require("packer").startup(
         require_plugin("nvim-web-devicons")
         require_plugin("galaxyline.nvim")
         require_plugin("tpope.io/vim/surround.git")
+        require_plugin("tpope.io/vim/repeat.git")
         require_plugin("unblevable/quick-scope")
         require_plugin("nikvdp/neomux")
         require_plugin("psliwka/vim-smoothie")
+        require_plugin("b4winckler/vim-angry.git")
         require_plugin("kdheepak/lazygit.nvim")
         require_plugin("brooth/far.vim")
     end

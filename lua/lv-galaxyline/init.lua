@@ -60,6 +60,16 @@ gls.left[1] = {
 print(vim.fn.getbufvar(0, 'ts'))
 vim.fn.getbufvar(0, 'ts')
 
+local winNum = {
+    WinNum = {
+        provider = function()
+            return "W:" .. vim.api.nvim_win_get_number(0) .. " "
+        end,
+        separator = ' ',
+        highlight = {colors.grey, colors.bg}
+    }
+}
+
 gls.left[2] = {
     GitIcon = {
         provider = function()
@@ -170,16 +180,6 @@ gls.right[8] = {
     }
 }
 
-gls.right[9] = {
-    WinNum = {
-        provider = function()
-            return "W:" .. vim.api.nvim_win_get_number(0) .. " "
-        end,
-        separator = ' ',
-        highlight = {colors.grey, colors.bg}
-    }
-}
-
 gls.right[10] = {
     BufferType = {
         provider = 'FileTypeName',
@@ -200,6 +200,7 @@ gls.right[11] = {
     }
 }
 
+
 gls.right[12] = {
     Space = {
         provider = function()
@@ -210,6 +211,8 @@ gls.right[12] = {
         highlight = {colors.orange, colors.bg}
     }
 }
+
+gls.right[13] = winNum
 
 gls.short_line_left[1] = {
     BufferType = {
@@ -223,5 +226,8 @@ gls.short_line_left[1] = {
 gls.short_line_left[2] = {
     SFileName = {provider = 'SFileName', condition = condition.buffer_not_empty, highlight = {colors.grey, colors.bg}}
 }
+
+gls.short_line_right[1] = winNum
+
 
 -- gls.short_line_right[1] = {BufferIcon = {provider = 'BufferIcon', highlight = {colors.grey, colors.bg}}}

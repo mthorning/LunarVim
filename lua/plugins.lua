@@ -35,10 +35,6 @@ return require("packer").startup(
         -- Packer can manage itself as an optional plugin
         use "wbthomason/packer.nvim"
 
-        --tmux navigation (trying neomux first)
-        -- use {"christoomey/vim-tmux-navigator"}
-
-
         -- TODO refactor all of this (for now it works, but yes I know it could be wrapped in a simpler function)
         use {"neovim/nvim-lspconfig", opt = true}
         use {"glepnir/lspsaga.nvim", opt = true}
@@ -100,7 +96,7 @@ return require("packer").startup(
         use "https://github.com/b4winckler/vim-angry.git"
         
         use "kdheepak/lazygit.nvim"
-        use "brooth/far.vim"        
+        use "brooth/far.vim"
 
         require_plugin("nvim-lspconfig")
         require_plugin("lspsaga.nvim")
@@ -129,7 +125,7 @@ return require("packer").startup(
         require_plugin("unblevable/quick-scope")
         require_plugin("nikvdp/neomux")
         require_plugin("psliwka/vim-smoothie")
-        require_plugin("b4winckler/vim-angry.git")
+        require_plugin("https://github.com/b4winckler/vim-angry.git")
         require_plugin("kdheepak/lazygit.nvim")
         require_plugin("brooth/far.vim")
     end

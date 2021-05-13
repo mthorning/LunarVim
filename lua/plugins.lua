@@ -94,6 +94,9 @@ return require("packer").startup(
         -- Git blame line
         use "f-person/git-blame.nvim"
 
+        -- For braces, brackets, etc
+        use "blackcauldron7/surround.nvim"
+
         require_plugin("nvim-lspconfig")
         require_plugin("lspsaga.nvim")
         require_plugin("nvim-lspinstall")
@@ -121,5 +124,6 @@ return require("packer").startup(
         require_plugin("kdheepak/lazygit.nvim")
         require_plugin("f-person/git-blame.nvim")
         require_plugin("karb94/neoscroll.nvim")
+        require_plugin("blackcauldron7/surround.nvim")
     end
 )

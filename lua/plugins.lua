@@ -88,14 +88,14 @@ return require("packer").startup(
         -- Smooth page up and down
         use 'karb94/neoscroll.nvim'
 
-        -- Git UI
+        -- Git
         use "kdheepak/lazygit.nvim"
-
-        -- Git blame line
         use "f-person/git-blame.nvim"
 
         -- For braces, brackets, etc
         use "blackcauldron7/surround.nvim"
+
+        use "brooth/far.vim"
 
         require_plugin("nvim-lspconfig")
         require_plugin("lspsaga.nvim")
@@ -125,5 +125,6 @@ return require("packer").startup(
         require_plugin("f-person/git-blame.nvim")
         require_plugin("karb94/neoscroll.nvim")
         require_plugin("blackcauldron7/surround.nvim")
+        require_plugin("brooth/far.vim")
     end
 )

@@ -8,11 +8,9 @@ an executable
 ]]
 
 -- general
-O.auto_complete = true
 O.colorscheme = 'dracula'
 O.auto_close_tree = 1
-O.wrap_lines = false
-O.timeoutlen = 100
+O.shell = 'bash'
 
 -- dashboard
 -- O.dashboard.custom_header = {""}
@@ -22,6 +20,7 @@ O.timeoutlen = 100
 O.treesitter.ensure_installed = "all"
 O.treesitter.ignore_install = {"haskell"}
 O.treesitter.highlight.enabled = true
+O.treesitter.rainbow.enabled = true
 
 
 O.clang.diagnostics.virtual_text = false
@@ -51,7 +50,7 @@ O.lua.autoformat = false
 
 -- javascript
 O.tsserver.formatter = 'prettier'
-O.tsserver.linter = nil
+O.tsserver.linter = 'eslint'
 O.tsserver.autoformat = true
 
 -- json

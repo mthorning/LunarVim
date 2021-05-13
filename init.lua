@@ -19,6 +19,7 @@ require('lv-rnvimr')
 require('lv-which-key')
 require('lv-neomux')
 require('lv-lazygit')
+require('lv-neoscroll')
 
 -- TODO is there a way to do this without vimscript
 vim.cmd('source ~/.config/nvim/vimscript/functions.vim')

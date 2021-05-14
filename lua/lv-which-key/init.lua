@@ -73,6 +73,9 @@ vim.api.nvim_set_keymap("n", "<leader>g", ":LazyGit<CR>", {noremap = true, silen
 -- New Tab
 vim.api.nvim_set_keymap("n", "<leader>n", ":tabnew<CR>", {noremap = true, silent = true})
 
+-- Joplin
+vim.api.nvim_set_keymap("n", "<leader>j", ":lua require('lv-joplin').joplin()<CR>", {noremap = true, silent = true})
+
 -- Vim objects
 vim.api.nvim_set_keymap("n", "<leader>?", ":lua print(vim.inspect(vim))<CR>", {noremap = true, silent = true})
 
@@ -88,6 +91,7 @@ local mappings = {
     ["g"] = "Git",
     ["?"] = "Vim API",
     ["n"] = "New Tab",
+    ["j"] = "Joplin",
     t = {
         name = "+Terminal",
         t = "Here",

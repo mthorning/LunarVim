@@ -17,9 +17,11 @@ local function require_plugin(plugin)
     local ok, err, code = os.rename(plugin_path, plugin_path)
     if not ok then
         if code == 13 then
+             print(plugin .. " permission denied " .. plugin_path)
             -- Permission denied, but it exists
             return true
         end
+        print(plugin .. " not found at " .. plugin_path)
     end
     --	print(ok, err, code)
     if ok then
@@ -95,7 +97,7 @@ return require("packer").startup(
         -- For braces, brackets, etc
         use "blackcauldron7/surround.nvim"
 
-        use "brooth/far.vim"
+        use {"brooth/far.vim", opt = true, as = "brooth/far.vim"}
 
         require_plugin("nvim-lspconfig")
         require_plugin("lspsaga.nvim")
@@ -107,7 +109,6 @@ return require("packer").startup(
         require_plugin("nvim-dap")
         require_plugin("nvim-compe")
         require_plugin("vim-vsnip")
-        require_plugin("nvim-treesitter")
         require_plugin("nvim-ts-autotag")
         require_plugin("nvim-tree.lua")
         require_plugin("gitsigns.nvim")
@@ -119,12 +120,6 @@ return require("packer").startup(
         require_plugin("nvcode-color-schemes.vim")
         require_plugin("nvim-web-devicons")
         require_plugin("galaxyline.nvim")
-        require_plugin("unblevable/quick-scope")
-        require_plugin("nikvdp/neomux")
-        require_plugin("kdheepak/lazygit.nvim")
-        require_plugin("f-person/git-blame.nvim")
-        require_plugin("karb94/neoscroll.nvim")
-        require_plugin("blackcauldron7/surround.nvim")
         require_plugin("brooth/far.vim")
     end
 )

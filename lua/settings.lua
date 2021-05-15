@@ -27,7 +27,7 @@ vim.o.t_Co = "256" -- Support 256 colors
 vim.o.conceallevel = 0 -- So that I can see `` in markdown files
 
 vim.o.swapfile = false
-vim.o.undodir = '~/.vim/undodir'
+vim.o.undodir = vim.fn.expand('$HOME/.vim/undodir')
 vim.o.undofile = true
 vim.o.backup = false -- This is recommended by coc
 vim.o.writebackup = false -- This is recommended by coc

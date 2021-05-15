@@ -100,6 +100,8 @@ return require("packer").startup(
 
         use {"brooth/far.vim", opt = true, as = "brooth/far.vim"}
 
+		use 'mtth/scratch.vim'
+
         require_plugin("nvim-lspconfig")
         require_plugin("lspsaga.nvim")
         require_plugin("nvim-lspinstall")

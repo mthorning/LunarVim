@@ -47,9 +47,6 @@ local opts = {
 vim.api.nvim_set_keymap('n', '<Space>', '<NOP>', {noremap = true, silent = true})
 vim.g.mapleader = ' '
 
--- no hl
-vim.api.nvim_set_keymap('n', '<Leader>h', ':set hlsearch!<CR>', {noremap = true, silent = true})
-
 -- explorer
 vim.api.nvim_set_keymap('n', '<Leader>e', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
 
@@ -71,10 +68,13 @@ vim.api.nvim_set_keymap("n", "<leader>q", ":q<CR>", {noremap = true, silent = tr
 vim.api.nvim_set_keymap("n", "<leader>g", ":LazyGit<CR>", {noremap = true, silent = true})
 
 -- New Tab
-vim.api.nvim_set_keymap("n", "<leader>n", ":tabnew<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<leader>N", ":tabnew<CR>", {noremap = true, silent = true})
 
 -- Vim objects
 vim.api.nvim_set_keymap("n", "<leader>?", ":lua print(vim.inspect(vim))<CR>", {noremap = true, silent = true})
+
+-- Opens scratch
+vim.api.nvim_set_keymap("n", "<leader>n", ":Scratch<CR>", {noremap = true, silent = true})
 
 -- TODO create entire treesitter section
 
@@ -84,10 +84,10 @@ local mappings = {
     ["a"] = "Save All",
     ["q"] = "Quit",
     ["e"] = "Explorer",
-    ["h"] = "No Highlight",
     ["g"] = "Git",
     ["?"] = "Vim API",
-    ["n"] = "New Tab",
+    ["N"] = "New Tab",
+    ["n"] = "Note",
     t = {
         name = "+Terminal",
         t = "Here",

@@ -14,8 +14,7 @@ O = {
         ensure_installed = "all",
         ignore_install = {"haskell"},
         highlight = {enabled = true},
-        playground = {enabled = true},
-        rainbow = {enabled = false}
+        rainbow = {enabled = true},
     },
 
     database = {save_location = '~/.config/nvcode_db', auto_execute = 1},

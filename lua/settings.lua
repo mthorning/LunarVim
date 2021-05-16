@@ -1,5 +1,5 @@
 if vim.fn.has('nvim') and vim.fn.executable('nvr') then
-  vim.fn.setenv('GIT_EDITOR',  "nvr -cc split --remote-wait +'set bufhidden=wipe'")
+  vim.fn.setenv('GIT_EDITOR',  "nvr -cc vsplit --remote-wait +'set bufhidden=wipe'")
 end
 
 vim.cmd('set iskeyword+=-') -- treat dash separated words as a word text object"
@@ -51,4 +51,4 @@ vim.o.hlsearch = false
 vim.o.incsearch = true
 vim.o.scrolloff = 8
 
-vim.o.updatetime = 50 
+vim.o.updatetime = 50

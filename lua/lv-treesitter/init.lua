@@ -12,14 +12,19 @@ require'nvim-treesitter.configs'.setup {
     autotag = {enable = true},
     textobjects = {
       select = {
-        enable = true,
+        module_path = "nvim-treesitter.textobjects.select",
+        enable = false,
+        disable = {},
         keymaps = {
-          -- You can use the capture groups defined in textobjects.scm
-          ["af"] = "@function.outer",
-          ["if"] = "@function.inner",
-          ["aa"] = "@parameter.outer",
-          ["ia"] = "@parameter.inner",
-        },
+          ['af'] = '@function.outer',
+          ['if'] = '@function.inner',
+
+          ['ic'] = '@conditional.inner',
+          ['ac'] = '@conditional.outer',
+
+          ['aa'] = '@parameter.outer',
+          ['ia'] = '@parameter.inner',
+		},
       },
     },
 }

@@ -59,7 +59,7 @@ return require("packer").startup(
         -- Treesitter
         use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
         use {"nvim-treesitter/nvim-treesitter-textobjects"}
-        use {"windwp/nvim-ts-autotag", opt = true}
+        use {"windwp/nvim-ts-autotag"}
 
         -- Explorer
         use {"kyazdani42/nvim-tree.lua", opt = true}
@@ -100,7 +100,7 @@ return require("packer").startup(
 
         use {"brooth/far.vim", opt = true, as = "brooth/far.vim"}
 
-		use 'mtth/scratch.vim'
+	use 'mtth/scratch.vim'
 
         require_plugin("nvim-lspconfig")
         require_plugin("lspsaga.nvim")
@@ -112,7 +112,6 @@ return require("packer").startup(
         require_plugin("nvim-dap")
         require_plugin("nvim-compe")
         require_plugin("vim-vsnip")
-        require_plugin("nvim-ts-autotag")
         require_plugin("nvim-tree.lua")
         require_plugin("gitsigns.nvim")
         require_plugin("which-key.nvim")

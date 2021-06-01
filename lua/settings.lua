@@ -13,7 +13,7 @@ vim.o.titlestring="%<%F%=%l/%L - nvim"
 TERMINAL = vim.fn.expand('$TERMINAL')
 vim.cmd('let &titleold="'..TERMINAL..'"')
 vim.wo.wrap = O.wrap_lines -- Display long lines as just one line
-vim.cmd('set whichwrap+=<,>,[,],h,l') -- move to next line with theses keys
+vim.cmd('set whichwrap+=<,>,[,]') -- move to next line with theses keys
 vim.cmd('syntax on') -- syntax highlighting
 vim.o.pumheight = 10 -- Makes popup menu smaller
 vim.o.fileencoding = "utf-8" -- The encoding written to file

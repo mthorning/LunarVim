@@ -99,7 +99,8 @@ return require("packer").startup(
 
         use {"brooth/far.vim", opt = true, as = "brooth/far.vim"}
 
-		use 'mtth/scratch.vim'
+	use 'mtth/scratch.vim'
+	use 'https://tpope.io/vim/fugitive.git'
 
         require_plugin("nvim-lspconfig")
         require_plugin("lspsaga.nvim")

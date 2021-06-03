@@ -41,7 +41,7 @@ vim.bo.smartindent = true -- Makes indenting smart
 
 vim.wo.number = O.number -- set numbered lines
 vim.wo.relativenumber = O.relative_number -- set relative number
-vim.wo.cursorline = true -- Enable highlighting of the current line
+vim.wo.cursorline = false -- Enable highlighting of the current line
 vim.o.showtabline = 2 -- Always show tabs
 vim.o.showmode = false -- We don't need to see things like -- INSERT -- anymore
 vim.wo.signcolumn = "yes" -- Always show the signcolumn, otherwise it would shift the text each time

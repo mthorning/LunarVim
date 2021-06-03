@@ -8,7 +8,6 @@ an executable
 ]]
 
 -- general
-O.colorscheme = 'dracula'
 O.auto_close_tree = 1
 O.shell = 'bash'
 

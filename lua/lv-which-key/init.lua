@@ -76,6 +76,8 @@ vim.api.nvim_set_keymap("n", "<leader>?", ":lua print(vim.inspect(vim))<CR>", {n
 -- Opens scratch
 vim.api.nvim_set_keymap("n", "<leader>n", ":Scratch<CR>", {noremap = true, silent = true})
 
+vim.api.nvim_set_keymap("n", "<leader>tt", ":tabnew | :call NeomuxTerm()<CR>", {noremap = true, silent = true})
+
 -- TODO create entire treesitter section
 
 local mappings = {
@@ -90,7 +92,8 @@ local mappings = {
     ["n"] = "Note",
     t = {
         name = "+Terminal",
-        t = "Here",
+	["."] = "Here",
+        t = "Tab",
         s = "Split",
         v = "Vert split"
     },

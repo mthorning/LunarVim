@@ -148,7 +148,12 @@ local mappings = {
         ["9"] = "With 9",
         f = "Resize"
     },
-    S = {name = "+Session", s = {"<cmd>SessionSave<cr>", "Save Session"}, l = {"<cmd>SessionLoad<cr>", "Load Session"}}
+    S = {name = "+Session", s = {"<cmd>SessionSave<cr>", "Save Session"}, l = {"<cmd>SessionLoad<cr>", "Load Session"}},
+    b = {
+	name = "+Buffer",
+        y = "Yank",
+	p = "Paste",
+    }
 }
 
 local wk = require("which-key")

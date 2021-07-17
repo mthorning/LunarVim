@@ -62,8 +62,6 @@ return require("packer").startup(
 
         -- Explorer
         use {"kyazdani42/nvim-tree.lua", opt = true}
-        -- TODO remove when open on dir is supported by nvimtree
-        use "kevinhwang91/rnvimr"
 
         use {"lewis6991/gitsigns.nvim", opt = true}
         use {"folke/which-key.nvim", opt = true}

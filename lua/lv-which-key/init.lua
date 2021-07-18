@@ -78,7 +78,9 @@ vim.api.nvim_set_keymap("n", "<leader>n", ":Scratch<CR>", {noremap = true, silen
 
 vim.api.nvim_set_keymap("n", "<leader>tt", ":tabnew | :call NeomuxTerm()<CR>", {noremap = true, silent = true})
 
--- TODO create entire treesitter section
+-- Harpoon
+vim.api.nvim_set_keymap("n", "<leader>hm", ":lua require('harpoon.mark').add_file()<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<leader>hv", ":lua require('harpoon.ui').toggle_quick_menu()<CR>", {noremap = true, silent = true})
 
 local mappings = {
     ["/"] = "Comment",
@@ -156,6 +158,11 @@ local mappings = {
 	name = "+Buffer",
         y = "Yank",
 	p = "Paste",
+    },
+    h = {
+    	name = "Harpoon",
+    	m = "Mark",
+    	v = "View",
     }
 }
 

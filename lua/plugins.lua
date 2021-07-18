@@ -69,6 +69,8 @@ return require("packer").startup(
         use {"windwp/nvim-autopairs", opt = true}
         use {"terrortylor/nvim-comment", opt = true}
         use {"kevinhwang91/nvim-bqf", opt = true}
+	use {"ThePrimeagen/harpoon", opt = true}
+
 
         -- Color
         use {"christianchiarulli/nvcode-color-schemes.vim", opt = true}
@@ -122,5 +124,6 @@ return require("packer").startup(
         require_plugin("nvim-web-devicons")
         require_plugin("galaxyline.nvim")
         require_plugin("brooth/far.vim")
+        require_plugin("harpoon")
     end
 )
